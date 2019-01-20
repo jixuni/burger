@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="text-center">
+        <h1>Favorite Burgers</h1>
+        <div class="col-12">
+        <img src="../img/burger_image.jpg" class="img-fluid" alt="Burger image" width="300px" height="300px">
+    </div>
+    </div>
+    
+    <div class="row text-center">
+        <div class="col-12">
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" id="burger">
+            </div>
+            <button type="submit" class="btn btn-primary">Burger Me!</button>
+        </form>
+        </div>
+    </div>
+
+
+
+    <ul>
+        {{#each burgers}}
+        <li>
+            <p><span class="label" Burger Name:></span> {{this.id}}</p>
+            <p><span class="label" Burger Name:></span> {{this.burger_name}}</p>
+            <p><span class="label" Burger Name:></span> {{this.devoured}}</p>
+            <button data-id="{{this.id}}" class="delburger btn btn-danger">Delete</button>
+        </li>
+        {{/each}}
+    </ul>
+</div>
