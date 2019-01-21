@@ -1,7 +1,7 @@
 $(function() {
     //Capturing the value inside in the input field on button click 
     
-    $("#burgerBtn").on("submit", function(event) {
+    $("#burgerBtn").on("click", function(event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
     
@@ -26,7 +26,7 @@ $(function() {
       $(".delburger").on("click", function(event) {
         var id = $(this).data("id");
         var devour = {
-            devoured: true
+            devoured: 1
         };
     
         // Send the PUT request.

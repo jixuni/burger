@@ -22,14 +22,14 @@
             <h2>Burger List</h2>
             <ul>
                 {{#each burgers}}
-                {{#if this.devoured}}
+                {{#unless this.devoured}}
                 
                     
                     <p><span class="label" Burger Name:></span> {{this.burger_name}}</p>
                     
                     <button data-id="{{this.id}}" class="delburger btn btn-danger">Devoured</button>
                 
-                {{/if}}
+                {{/unless}}
                 {{/each}}
             </ul>
         </div>
@@ -38,13 +38,13 @@
             <h2>Devoured List</h2>
             <ul>
                 {{#each burgers}}
-                {{#unless this.devoured}}
+                {{#if this.devoured}}
             
                 
                     <p><span class="label" Burger Name:></span> {{this.burger_name}}</p>
                     
                 
-                {{/unless}}
+                {{/if}}
                 {{/each}}
             </ul>
         </div>
